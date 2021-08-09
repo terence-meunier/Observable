@@ -2,6 +2,7 @@ class Observable {
     
     constructor() {
         this.observers = [];
+        this.name = '';
     }
 
     subscribe(observer) {
@@ -13,4 +14,4 @@ class Observable {
     }
 }
 
-export { Observable }
+export default Observable;

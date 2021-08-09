@@ -5,8 +5,12 @@ class Observer {
     }
 
     update(data) {
-        console.log(this.name + ' reçois en donnée : ' + data);
+        if (data.type === 'submit') {
+            console.log(this.name + ' a observé que le bouton ' + data.id + ' a été cliqué');
+        } else {
+            console.log(this.name + ' a observé que la balise ' + data.id + ' a changé de valeur : ' + data.value);
+        }        
     }
 }
 
-export { Observer }
+export default Observer;
